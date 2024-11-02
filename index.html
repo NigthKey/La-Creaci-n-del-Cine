@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación del Cine</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {
+            background-color: #98ff98; /* Verde menta */
+            font-family: Calibri, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 4em; /* Tamaño del título */
+            margin: 0;
+        }
+
+        .content {
+            background-color: #f8f4e3; /* Blanco hueso */
+            padding: 20px;
+            border-radius: 8px;
+            margin: 0 auto;
+            max-width: 800px; /* Máximo ancho del contenido */
+            opacity: 0; /* Inicialmente oculto */
+            transform: translateY(50px); /* Desplazado hacia abajo */
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transiciones */
+        }
+
+        /* Clase para mostrar el contenido al hacer scroll */
+        .show {
+            opacity: 1; /* Hacer visible */
+            transform: translateY(0); /* Volver a la posición original */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333; /* Color de fondo del pie */
+            color: white; /* Color del texto del pie */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            margin-top: 20px; /* Espacio arriba del video */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Creación del Cine</h1>
+    </header>
+    
+    <div class="content" id="content">
+        <p>
+            La creación del cine fue un proceso de varios descubrimientos y avances técnicos a fines del siglo XIX, impulsados por la fascinación por el movimiento. Todo comenzó con dispositivos ópticos como el zoótropo y el praxinoscopio, que creaban la ilusión de movimiento al mostrar una serie de imágenes en rápida sucesión. Estos dispositivos inspiraron a inventores en la búsqueda de capturar y proyectar imágenes en movimiento.
+        </p>
+        
+        <p>
+            En 1891, Thomas Edison y su asistente William Dickson desarrollaron el kinetoscopio, un aparato que permitía ver breves secuencias de imágenes en movimiento, aunque sólo de forma individual. Años después, en 1895, los hermanos Auguste y Louis Lumière presentaron el cinematógrafo, que no sólo grababa imágenes en movimiento, sino que también las proyectaba para un público. Este invento es considerado el verdadero nacimiento del cine, ya que hizo posible la experiencia colectiva de ver una película. Su primera proyección pública incluyó cortometrajes como <em>La salida de los obreros de la fábrica</em>, cautivando a la audiencia y generando un enorme interés.
+        </p>
+        
+        <p>
+            En los años siguientes, el cine evolucionó rápidamente de ser una novedad técnica a un medio de entretenimiento y arte. Pioneros como Georges Méliès comenzaron a usar el cine para contar historias, empleando efectos especiales y creando mundos de fantasía, mientras que otros cineastas, como Edwin S. Porter en Estados Unidos, experimentaron con la edición y el montaje para mejorar la narrativa visual. Así, en pocas décadas, el cine se consolidó como una nueva forma de expresión cultural y artística, dando inicio a una industria que continuaría transformando la cultura y el entretenimiento a nivel mundial.
+        </p>
+
+        <h2>Video sobre la Creación del Cine</h2>
+        <iframe src="https://www.youtube.com/embed/LNorpMtgaVY" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pablo Sanic. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Mostrar el contenido al hacer scroll
+        window.addEventListener('scroll', function() {
+            const content = document.getElementById('content');
+            const windowHeight = window.innerHeight;
+            const contentTop = content.getBoundingClientRect().top;
+
+            if (contentTop < windowHeight) {
+                content.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>
 
